@@ -2,6 +2,7 @@
 <html lang="ja">
 
 <head>
+<meta name="robots" content="noindex, nofollow">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>Amazon ランキング予測</title>
@@ -5813,10 +5814,7 @@ return Plotly;
     let insightViewMode = 'summary';
     const GEMINI_WEB_URL = 'https://gemini.google.com/app';
     const CHATGPT_WEB_URL = 'https://chatgpt.com/';
-    const DEBUG_LOGS_ENABLED = false;
-    function debugLog() {
-      if (DEBUG_LOGS_ENABLED) console.log.apply(console, arguments);
-    }
+    function debugLog() { /* no-op */ }
 
     // Pythonから渡されるプロンプトテンプレート（APIキーは埋め込まない）
     const geminiIndividualPromptTemplate = `あなたは書籍・コミック（全巻セット含む）の仕入れ判断を支援するアナリストです。
@@ -7018,7 +7016,6 @@ Amazonランキングの順位・傾き・予測値を、外部事実の代わ�
 
     window.onload = function () {
       // --- DEBUG LOG ---
-      console.log('%c[window.onload] Initializing page...', 'color: green; font-weight: bold;');
       // --- END DEBUG LOG ---
 
       installPlotlyRestyleGuard();
@@ -7619,7 +7616,6 @@ Amazonランキングの順位・傾き・予測値を、外部事実の代わ�
 
       // 新しいソート順でソート
       // --- DEBUG LOG ---
-      console.log(`%c[redrawLegend] Sorting legend with key: ${sortKey}`, 'color: #007bff');
       // --- END DEBUG LOG ---
       const sortedGroups = sortAsinGroups(asinGroups, sortKey);
 
@@ -7638,7 +7634,6 @@ Amazonランキングの順位・傾き・予測値を、外部事実の代わ�
       legendContainer.innerHTML = '';
 
       // --- DEBUG LOG ---
-      console.log('%c[createCustomLegend] Grouping ASINs for legend...', 'color: #17a2b8');
       // ASINごとに凡例アイテムをグループ化して作成
       asinGroups = {}; // グローバル変数を初期化
       allTracesInfoGlobal.forEach(traceInfo => {
@@ -7703,29 +7698,23 @@ Amazonランキングの順位・傾き・予測値を、外部事実の代わ�
       if (legendContainer && !legendContainer.dataset.listenerAttached) {
         legendContainer.addEventListener('click', function (e) {
           // --- DEBUG LOG ---
-          console.log('%c[LegendClick] Event Fired', 'background: #222; color: #bada55');
           // --- END DEBUG LOG ---
-          console.log('Clicked Element:', e.target);
 
           const graphDiv = document.getElementById('dummy-plotly-graph');
           const legendItem = e.target.closest('.custom-legend-item');
           if (!legendItem) {
-            console.log('No legend item found. Exiting event handler.');
             return;
           }
 
           const clickedAsin = legendItem.getAttribute('data-asin');
           // --- DEBUG LOG ---
-          console.log(`%c[LegendClick] Found Legend Item. ASIN: ${clickedAsin}`, 'color: purple');
           // --- END DEBUG LOG ---
 
           // --- 個別ASINの処理 ---
           if (!clickedAsin) {
-            console.log('No data-asin found. Exiting event handler.');
             return;
           }
 
-          console.log(`%c[LegendClick] Handling individual ASIN: ${clickedAsin}`, 'color: purple'); // No change, just for context
           const currentGroup = asinGroups[clickedAsin];
           if (!currentGroup) return;
 
@@ -7733,7 +7722,6 @@ Amazonランキングの順位・傾き・予測値を、外部事実の代わ�
           if (e.target.classList.contains('actual-button')) {
             e.stopPropagation();
             // --- DEBUG LOG ---
-            console.log(`%c[LegendClick] '実績' button clicked for ASIN: ${clickedAsin}`, 'color: #fd7e14');
             const actualTraceState = allTracesData.data.find(t => t.originalIndex === currentGroup.actualTrace?.originalTraceIndex);
             if (!actualTraceState) return;
 
@@ -7741,7 +7729,6 @@ Amazonランキングの順位・傾き・予測値を、外部事実の代わ�
             const newVisibility = (actualTraceState.visible === true) ? 'legendonly' : true;
             actualTraceState.visible = newVisibility;
             // --- DEBUG LOG ---
-            console.log(`  > Updating ACTUAL trace state to visible: ${newVisibility}`);
             // --- END DEBUG LOG ---
 
             // グラフを更新
@@ -7767,7 +7754,6 @@ Amazonランキングの順位・傾き・予測値を、外部事実の代わ�
 
           // --- Handle click on the legend item itself (not a button) ---
           if (legendItem === e.target.closest('.custom-legend-item')) {
-            console.log(`%c[LegendClick] Legend item BODY clicked for ASIN: ${clickedAsin}`, 'color: #20c997');
 
             // 分布／時系列／GMV 共通: 表示オン ↔ hidden の二状態のみ
             const tracesToUpdate = setAsinGroupVisibility(
@@ -7812,7 +7798,6 @@ Amazonランキングの順位・傾き・予測値を、外部事実の代わ�
     // 個別ASINの凡例アイテムを描画する部分を関数化
     function renderIndividualLegendItems(sortedAsinGroups) {
       // --- DEBUG LOG ---
-      console.log('%c[renderIndividualLegendItems] Rendering individual legend items...', 'color: #dc3545');
       // --- END DEBUG LOG ---
 
       // 既存の個別ASIN凡例をクリアするためのコンテナを取得または作成
@@ -8249,9 +8234,7 @@ Amazonランキングの順位・傾き・予測値を、外部事実の代わ�
     function switchGraphView(viewType) {
       // --- DEBUG LOG ---
       // --- DEBUG LOG ---
-      console.log(`%c[switchGraphView] Switching from '${currentGraphView}' to '${viewType}'`, 'color: blue; font-weight: bold;');
       // --- END DEBUG LOG ---
-      console.log(`  Y-axis scale is currently: ${yAxisIsLog ? 'LOG' : 'LINEAR'}`);
 
       if (currentGraphView === viewType) return; // 同じビューなら何もしない
       clearPlotlyHover();
@@ -8283,7 +8266,6 @@ Amazonランキングの順位・傾き・予測値を、外部事実の代わ�
         // 状態管理オブジェクト `allTracesData.data` をそのまま使用する
         // 表示状態は既に `allTracesData.data` 内で管理されているため、DOMを読む必要はない
         const timeSeriesTraces = prepareCurrentResponsiveHoverText(tracesForTimeseriesView());
-        console.log(`  Preparing to render ${timeSeriesTraces.length} traces for timeseries view.`);
         // 念のため、ヒストグラムトレースは必ず非表示にする
         timeSeriesTraces.forEach(t => {
           const info = tracesInfoByIndex.get(t.originalIndex);
@@ -8300,7 +8282,6 @@ Amazonランキングの順位・傾き・予測値を、外部事実の代わ�
 
         // --- DEBUG LOG ---
         // --- DEBUG LOG ---
-        console.log("  Calling Plotly.react for timeseries view...");
         // --- END DEBUG LOG ---
         // --- END DEBUG LOG ---
 
@@ -8313,7 +8294,6 @@ Amazonランキングの順位・傾き・予測値を、外部事実の代わ�
                 timeseriesAddedOriginalIndices.add(trace.originalIndex);
               }
             });
-            console.log("%c  Successfully switched to timeseries view.", 'color: green;');
             captureInitialGraphRanges(graphDiv, 'timeseries');
             syncAlertVisibility();
             scheduleStagedTraceAddition();
@@ -8342,15 +8322,12 @@ Amazonランキングの順位・傾き・予測値を、外部事実の代わ�
         const histTracesToShow = buildHistogramTracesToShow();
 
         // --- DEBUG LOG ---
-        console.log(`  Preparing to render ${histTracesToShow.length} traces for histogram view.`);
         // --- END DEBUG LOG ---
-        console.log("  Calling Plotly.react for histogram view...");
 
         reactPlot(graphDiv, histTracesToShow, newHistogramLayout, plotlyConfig())
           .then((gd) => {
             if (viewGeneration !== stagedTraceGeneration || currentGraphView !== 'histogram') return;
             rebuildPlotTraceIndexMap(gd);
-            console.log("%c  Successfully switched to histogram view.", 'color: green;');
             captureInitialGraphRanges(graphDiv, 'histogram');
           })
           .catch(err => console.error("%c[switchGraphView] Error switching to histogram view:", 'color: red;', err));
@@ -8366,7 +8343,6 @@ Amazonランキングの順位・傾き・予測値を、外部事実の代わ�
           .then((gd) => {
             if (viewGeneration !== stagedTraceGeneration || currentGraphView !== 'gmv') return;
             rebuildPlotTraceIndexMap(gd);
-            console.log("%c  Successfully switched to GMV view.", 'color: green;');
             captureInitialGraphRanges(graphDiv, 'gmv');
           })
           .catch(err => console.error("%c[switchGraphView] Error switching to GMV view:", 'color: red;', err));
@@ -8388,7 +8364,6 @@ Amazonランキングの順位・傾き・予測値を、外部事実の代わ�
       const gd = document.getElementById('dummy-plotly-graph');
       if (!gd) return;
       // --- DEBUG LOG ---
-      console.log('%c[clearIndividualGraphs] Clearing all individual graphs...', 'color: orange');
       // --- END DEBUG LOG ---
 
       const indicesToUpdate = [];
@@ -8426,14 +8401,11 @@ Amazonランキングの順位・傾き・予測値を、外部事実の代わ�
       } else if (currentGraphView === 'gmv') {
         refreshGmvView();
       } else if (indicesToUpdate.length > 0) {
-        console.log(`  Hiding ${indicesToUpdate.length} traces.`);
         restyleByOriginalIndices(gd, { visible: 'legendonly' }, indicesToUpdate);
       } else {
-        console.log('  No individual traces were visible to hide.');
       }
 
       // --- DEBUG LOG ---
-      console.log('%c[clearIndividualGraphs] Finished.', 'color: orange');
       // --- END DEBUG LOG ---
       updateVisibleCount();
     }

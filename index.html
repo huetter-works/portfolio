@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
   <meta name="description" content="静的フロントエンドのポートフォリオ習作">
   <title>huetter-works / Portfolio</title>
   <style>
@@ -35,9 +36,20 @@
       letter-spacing: 0.04em;
     }
     .lede {
-      margin: 0 0 2.5rem;
+      margin: 0 0 2.75rem;
       color: var(--muted);
       line-height: 1.7;
+    }
+    section {
+      margin-bottom: 2.5rem;
+    }
+    h2 {
+      margin: 0 0 0.85rem;
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--muted);
     }
     ul {
       list-style: none;
@@ -81,32 +93,49 @@
   <main>
     <h1>Portfolio</h1>
     <p class="lede">フロントエンド習作、Illustrator 作品、分析ツールの公開デモです。実在の店舗・サービスではありません。</p>
-    <ul>
-      <li>
-        <a class="work" href="./Mondrian/">
-          <span class="title">Mondrian</span>
-          <span class="desc">CSS Grid でモンドリアンの画面構成を模したギャラリー</span>
-        </a>
-      </li>
-      <li>
-        <a class="work" href="./CafeSample/">
-          <span class="title">Cafe Sample</span>
-          <span class="desc">架空カフェの1ページレイアウト習作</span>
-        </a>
-      </li>
-      <li>
-        <a class="work" href="./Illustration/">
-          <span class="title">Illustration</span>
-          <span class="desc">年賀状（個人制作）と、職業訓練時のWebバナー</span>
-        </a>
-      </li>
-      <li>
-        <a class="work" href="./AmazonRankingPredictor/">
-          <span class="title">Amazon Ranking Predictor</span>
-          <span class="desc">全巻セット仕入れ向けの BSR 予測ビューア（Python / Prophet / Plotly）。公開デモは合成データです。</span>
-        </a>
-      </li>
-    </ul>
+
+    <section>
+      <h2>Web / Front-end</h2>
+      <ul>
+        <li>
+          <a class="work" href="./Mondrian/">
+            <span class="title">Mondrian</span>
+            <span class="desc">CSS Grid でモンドリアンの画面構成を模したギャラリー</span>
+          </a>
+        </li>
+        <li>
+          <a class="work" href="./CafeSample/">
+            <span class="title">Cafe Sample</span>
+            <span class="desc">架空カフェの1ページレイアウト習作</span>
+          </a>
+        </li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Illustration</h2>
+      <ul>
+        <li>
+          <a class="work" href="./Illustration/">
+            <span class="title">Illustration</span>
+            <span class="desc">年賀状（個人制作）と、職業訓練時のWebバナー</span>
+          </a>
+        </li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Data / Tools</h2>
+      <ul>
+        <li>
+          <a class="work" href="./AmazonRankingPredictor/">
+            <span class="title">Amazon Ranking Predictor</span>
+            <span class="desc">全巻セット仕入れ向けの BSR 予測ビューア（Python / Prophet / Plotly）。公開デモはテスト用の小規模サンプルです。</span>
+          </a>
+        </li>
+      </ul>
+    </section>
+
     <footer>
       <a href="https://github.com/huetter-works/portfolio">GitHub リポジトリ</a>
     </footer>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="静的フロントエンドのポートフォリオ習作">
+  <title>huetter-works / Portfolio</title>
+  <style>
+    :root {
+      --bg: #f4f1ec;
+      --ink: #1c1b19;
+      --muted: #5c574f;
+      --line: #d9d2c7;
+      --accent: #b85c38;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: "Hiragino Mincho ProN", "Yu Mincho", "Noto Serif JP", serif;
+      color: var(--ink);
+      background:
+        radial-gradient(ellipse at top left, #fff8ef 0%, transparent 55%),
+        linear-gradient(160deg, var(--bg), #e8e2d8);
+    }
+    main {
+      max-width: 40rem;
+      margin: 0 auto;
+      padding: 4rem 1.5rem 5rem;
+    }
+    h1 {
+      margin: 0 0 0.5rem;
+      font-size: clamp(1.8rem, 5vw, 2.4rem);
+      font-weight: 600;
+      letter-spacing: 0.04em;
+    }
+    .lede {
+      margin: 0 0 2.5rem;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      border-top: 1px solid var(--line);
+    }
+    li {
+      border-bottom: 1px solid var(--line);
+    }
+    a.work {
+      display: block;
+      padding: 1.25rem 0.15rem;
+      color: inherit;
+      text-decoration: none;
+    }
+    a.work:hover .title {
+      color: var(--accent);
+    }
+    .title {
+      display: block;
+      font-size: 1.25rem;
+      transition: color 0.15s ease;
+    }
+    .desc {
+      display: block;
+      margin-top: 0.35rem;
+      color: var(--muted);
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+    footer {
+      margin-top: 3rem;
+      color: var(--muted);
+      font-size: 0.85rem;
+    }
+    footer a { color: var(--muted); }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Portfolio</h1>
+    <p class="lede">静的フロントエンドの習作です。実在の店舗・サービスではありません。</p>
+    <ul>
+      <li>
+        <a class="work" href="./Mondrian/">
+          <span class="title">Mondrian</span>
+          <span class="desc">CSS Grid でモンドリアンの画面構成を模したギャラリー</span>
+        </a>
+      </li>
+      <li>
+        <a class="work" href="./CafeSample/">
+          <span class="title">Cafe Sample</span>
+          <span class="desc">架空カフェの1ページレイアウト習作</span>
+        </a>
+      </li>
+    </ul>
+    <footer>
+      <a href="https://github.com/huetter-works/portfolio">GitHub リポジトリ</a>
+    </footer>
+  </main>
+</body>
+</html>

@@ -2,6 +2,12 @@
 
 静的フロントエンドの習作をまとめたポートフォリオ用リポジトリです。
 
+## 公開ページ（GitHub Pages）
+
+- トップ: https://huetter-works.github.io/portfolio/
+- Mondrian: https://huetter-works.github.io/portfolio/Mondrian/
+- Cafe Sample: https://huetter-works.github.io/portfolio/CafeSample/
+
 ## 作品
 
 | フォルダ | 内容 |

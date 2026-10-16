@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta name="description" content="mondrian gallery">
+    <meta name="keywords" content="mondrian,モンドリアン">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Mondrian NEUE CSS GESTALTUNG</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/styleBase.css">
+    <link rel="stylesheet" href="css/gnav.css">
+    <link rel="stylesheet" href="css/modal.css">
+
+    <link rel="stylesheet" href="css/styleScreen.css" media="screen and (min-width:560px)">
+    <link rel="stylesheet" href="css/card.css" media="screen and (min-width:560px)">
+    <link rel="stylesheet" href="css/layoutScreen.css" media="screen and (min-width:560px)">
+    <link rel="stylesheet" href="css/animation.css">
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="l-body">
+        <header class="header">
+            <h1>Piet<br>
+                MONDRIAN</h1>
+            <p lang="de">NEUE CSS GESTALTUNG</p>
+            <nav id="menu">
+                <ul class="gnav">
+                    <li>
+                        <a href="profile.html" class="gnav-btn">profile</a>
+                    </li>
+                    <li>
+                        <p class="modal-btn js-modal-open gnav-btn" data-target="contact">contact</p>
+                        <div class="contact-modal hidden">
+                            <div id="contact" class="modal-content">
+                                <div class="modal-header">
+                                    <h2>contact</h2>
+                                    <div class="modal-close-icon"><span></span></div>
+                                </div>
+                                <p class="contact-demo-note">このフォームはデモです。送信されません。</p>
+                                <form class="js-contact-demo" action="#" method="get">
+                                    <dl>
+                                        <dt>name</dt>
+                                        <dd>
+                                            <input type="text" name="name" placeholder="Piet MONDRIAN" value="Piet Mondrian">
+                                        </dd>
+                                        <dt>email</dt>
+                                        <dd>
+                                            <input type="email" name="email" placeholder="Mondrian@style.com">
+                                        </dd>
+                                        <dt>message</dt>
+                                        <dd>
+                                            <textarea name="message" cols="20" rows="8" maxlength="20">ご意見・ご感想をお寄せください。</textarea>
+                                        </dd>
+                                    </dl>
+                                    <input type="submit" value="submit">
+                                </form>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="gnav-gallery-menu"><a href="" class="gnav-btn">gallery</a>
+                        <ul>
+                            <li class="js-modal-open gnav-btn-accordion" data-target="figure01">柳</li>
+                            <li class="" data-target="figure02">陽の中の風車</li>
+                            <li class="js-modal-open gnav-btn-accordion" data-target="figure03">夕方，赤い木</li>
+                            <li class="js-modal-open gnav-btn-accordion" data-target="figure04">砂丘から見たドンブルグの浜と埠頭</li>
+                            <li class="" data-target="figure05">ウェストカペッレの灯台</li>
+                            <li class="js-modal-open gnav-btn-accordion" data-target="figure06">荒れた城の春</li>
+                            <li class="js-modal-open gnav-btn-accordion" data-target="figure07">灰色の木</li>
+                            <li class="js-modal-open gnav-btn-accordion" data-target="figure08">赤・黄・青・黒のコンポジション</li>
+                            <li class="js-modal-open gnav-btn-accordion" data-target="figure09">Tableau I</li>
+                            <li class="js-modal-open gnav-btn-accordion" data-target="figure10">赤・青・黄のコンポジション</li>
+                            <li class="js-modal-open gnav-btn-accordion" data-target="figure11">Composition No. 10</li>
+                            <li class="" data-target="figure12">線のコンポジション</li>
+                            <li class="" data-target="figure14">赤・青・白のコンポジション II</li>
+                            <li class="" data-target="figure15">ニューヨーク I</li>
+                            <li class="js-modal-open gnav-btn-accordion" data-target="figure16">ヴィクトリー・ブギウギ</li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <section><a href="profile.html">
+                <h2 class="gnav-btn">profile</h2>
+            </a></section>
+        <section>
+        </section>
+        <section>
+            <h2 class="modal-btn js-modal-open gnav-btn" data-target="contact">contact</h2>
+        </section>
+
+        <section class="section">
+            <div class="card-container">
+                <div class="card">
+                    <div class="front">
+                        <h3 class="title">01 柳</h3>
+                    </div>
+                    <div class="back js-modal-open" data-target="figure01">
+                        <img src="images/996px-20_sep_13_klee_around_the_core.jpg" srcset="images/622px-20_sep_13_klee_around_the_core.jpg 559w,images/996px-20_sep_13_klee_around_the_core.jpg 959w" sizes="(max-width: 559px) 90vw, (max-width: 959px) 75vw" alt="柳" title="柳">
+                        <dl>
+                            <dt>題名</dt>
+                            <dd>柳</dd>
+                            <dd lang="en">Willow Grove: Impression of Light and Shadow</dd>
+                            <dt>制作年</dt>
+                            <dd>1905</dd>
+                            <dt>所蔵</dt>
+                            <dd>ダラス美術館</dd>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h3 class="title">02 陽の中の風車</h3>
+        </section>
+
+        <section class="section">
+            <div class="card-container">
+                <div class="card">
+                    <div class="front">
+                        <h3 class="title">03 夕方，赤い木</h3>
+                    </div>
+                    <div class="back js-modal-open" data-target="figure03">
+                        <img src="images/1020px-Piet_Mondrian,_1908-10,_Evening;_Red_Tree_(Avond;_De_rode_boom),_oil_on_canvas,_70_x_99_cm,_Gemeentemuseum_Den_Haag.jpg" srcset="images/640px-Piet_Mondrian,_1908-10,_Evening;_Red_Tree_(Avond;_De_rode_boom),_oil_on_canvas,_70_x_99_cm,_Gemeentemuseum_Den_Haag.jpg 559w,images/1020px-Piet_Mondrian,_1908-10,_Evening;_Red_Tree_(Avond;_De_rode_boom),_oil_on_canvas,_70_x_99_cm,_Gemeentemuseum_Den_Haag.jpg 959w" sizes="(max-width: 559px) 90vw, (max-width: 959px) 75vw" alt="夕方，赤い木" title="夕方，赤い木">
+                        <dl>
+                            <dt>題名</dt>
+                            <dd>夕方，赤い木</dd>
+                            <dd lang="en">Evening; Red Tree (Avond; De rode boom)</dd>
+                            <dt>制作年</dt>
+                            <dd>1908-10</dd>
+                            <dt>所蔵</dt>
+                            <dd>デン・ハーグ市立美術館</dd>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="card-container">
+                <div class="card">
+                    <div class="front">
+                        <h3 class="title">04 砂丘から見たドンブルグの浜と埠頭</h3>
+                    </div>
+                    <div class="back js-modal-open" data-target="figure04">
+                        <img src="images/970px-Piet_Mondrian,_1909,_View_from_the_Dunes_with_Beach_and_Piers,_Domburg,_MoMA.jpg" srcset="images/640px-Piet_Mondrian,_1909,_View_from_the_Dunes_with_Beach_and_Piers,_Domburg,_MoMA.jpg 559w,images/970px-Piet_Mondrian,_1909,_View_from_the_Dunes_with_Beach_and_Piers,_Domburg,_MoMA.jpg 959w" sizes="(max-width: 559px) 90vw, (max-width: 959px) 75vw" alt="砂丘から見たドンブルグの浜と埠頭" title="砂丘から見たドンブルグの浜と埠頭">
+                        <dl>
+                            <dt>題名</dt>
+                            <dd>砂丘から見たドンブルグの浜と埠頭</dd>
+                            <dd lang="en">View from the Dunes with Beach and Piers, Domburg</dd>
+                            <dt>制作年</dt>
+                            <dd>1909</dd>
+                            <dt>所蔵</dt>
+                            <dd>ニューヨーク近代美術館</dd>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h3 class="title">05 ウェストカペッレの灯台</h3>
+        </section>
+
+        <section class="section">
+            <div class="card-container">
+                <div class="card">
+                    <div class="front">
+                        <h3 class="title">06 荒れた城の春</h3>
+                    </div>
+                    <div class="back js-modal-open" data-target="figure06">
+                        <img src="images/811px-17_sep_13_mondrian_castle.jpg" srcset="images/541px-17_sep_13_mondrian_castle.jpg 559w,images/811px-17_sep_13_mondrian_castle.jpg 959w" sizes="(max-width: 559px) 90vw, (max-width: 959px) 75vw" alt="荒れた城の春" title="荒れた城の春">
+                        <dl>
+                            <dt>題名</dt>
+                            <dd>荒れた城の春</dd>
+                            <dd lang="en">Spring Sun (Lentezon): Castle Ruin: Brederode</dd>
+                            <dt>制作年</dt>
+                            <dd>1909-1910</dd>
+                            <dt>所蔵</dt>
+                            <dd>ダラス美術館</dd>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="card-container">
+                <div class="card">
+                    <div class="front">
+                        <h3 class="title">07 灰色の木</h3>
+                    </div>
+                    <div class="back js-modal-open" data-target="figure07">
+                        <img src="images/Piet_Mondrian,_1911,_Gray_Tree_(De_grijze_boom),_oil_on_canvas,_79.7_x_109.1_cm,_Gemeentemuseum_Den_Haag,_Netherlands.jpg" srcset="images/Piet_Mondrian,_1911,_Gray_Tree_(De_grijze_boom),_oil_on_canvas,_79.7_x_109.1_cm,_Gemeentemuseum_Den_Haag,_Netherlands.jpg 559w,images/Piet_Mondrian,_1911,_Gray_Tree_(De_grijze_boom),_oil_on_canvas,_79.7_x_109.1_cm,_Gemeentemuseum_Den_Haag,_Netherlands.jpg 959w" sizes="(max-width: 559px) 90vw, (max-width: 959px) 75vw" alt="灰色の木" title="灰色の木">
+                        <dl>
+                            <dt>題名</dt>
+                            <dd>灰色の木</dd>
+                            <dd lang="en">Gray Tree</dd>
+                            <dt>制作年</dt>
+                            <dd>1911</dd>
+                            <dt>所蔵</dt>
+                            <dd>デン・ハーグ市立美術館</dd>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="card-container">
+                <div class="card">
+                    <div class="front">
+                        <h3 class="title">08 赤・黄・青・黒のコンポジション</h3>
+                    </div>
+                    <div class="back js-modal-open" data-target="figure08">
+                        <img src="images/1083px-Piet_Mondriaan,_1921_-_Composition_en_rouge,_jaune,_bleu_et_noir.jpg" srcset="images/722px-Piet_Mondriaan,_1921_-_Composition_en_rouge,_jaune,_bleu_et_noir.jpg 559w,images/1083px-Piet_Mondriaan,_1921_-_Composition_en_rouge,_jaune,_bleu_et_noir.jpg 959w" sizes="(max-width: 559px) 90vw, (max-width: 959px) 75vw" alt="赤・黄・青・黒のコンポジション" title="赤・黄・青・黒のコンポジション">
+                        <dl>
+                            <dt>題名</dt>
+                            <dd>赤・黄・青・黒のコンポジション</dd>
+                            <dd lang="en">Composition with Large Red Plane, Yellow, Black, Gray, and Blue</dd>
+                            <dt>制作年</dt>
+                            <dd>1921</dd>
+                            <dt>所蔵</dt>
+                            <dd>デン・ハーグ市立美術館</dd>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="card-container">
+                <div class="card">
+                    <div class="front">
+                        <h3 class="title">09 Tableau I</h3>
+                    </div>
+                    <div class="back js-modal-open" data-target="figure09">
+                        <img src="images/1017px-Tableau_I,_by_Piet_Mondriaan.jpg" srcset="images/452px-Tableau_I,_by_Piet_Mondriaan.jpg 559w,images/1017px-Tableau_I,_by_Piet_Mondriaan.jpg 959w" sizes="(max-width: 559px) 90vw, (max-width: 959px) 75vw" alt="Tableau I" title="Tableau I">
+                        <dl>
+                            <dt>題名</dt>
+                            <dd>Tableau I</dd>
+                            <dd lang="en">Tableau I</dd>
+                            <dt>制作年</dt>
+                            <dd>1930</dd>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="card-container">
+                <div class="card">
+                    <div class="front">
+                        <h3 class="title">10 赤・青・黄のコンポジション</h3>
+                    </div>
+                    <div class="back js-modal-open" data-target="figure10">
+                        <img src="images/1065px-Piet_Mondriaan,_1930_-_Mondrian_Composition_II_in_Red,_Blue,_and_Yellow.jpg" srcset="images/710px-Piet_Mondriaan,_1930_-_Mondrian_Composition_II_in_Red,_Blue,_and_Yellow.jpg 559w,images/1065px-Piet_Mondriaan,_1930_-_Mondrian_Composition_II_in_Red,_Blue,_and_Yellow.jpg 959w" sizes="(max-width: 559px) 90vw, (max-width: 959px) 75vw" alt="赤・青・黄のコンポジション" title="赤・青・黄のコンポジション">
+                        <dl>
+                            <dt>題名</dt>
+                            <dd>赤・青・黄のコンポジション</dd>
+                            <dd lang="en">Composition II in Red, Blue, and Yellow</dd>
+                            <dt>制作年</dt>
+                            <dd>1930</dd>
+                            <dt>所蔵</dt>
+                            <dd>個人蔵</dd>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="card-container">
+                <div class="card">
+                    <div class="front">
+                        <h3 class="title">11 Composition No. 10</h3>
+                    </div>
+                    <div class="back js-modal-open" data-target="figure11">
+                        <img src="images/Piet_Mondriaan,_1939-1942_-_Composition_10.jpg" srcset="images/644px-Piet_Mondriaan,_1939-1942_-_Composition_10.jpg 559w,images/Piet_Mondriaan,_1939-1942_-_Composition_10.jpg 959w" sizes="(max-width: 559px) 90vw, (max-width: 959px) 75vw" alt="Composition No. 10" title="Composition No. 10">
+                        <dl>
+                            <dt>題名</dt>
+                            <dd>Composition No. 10</dd>
+                            <dd lang="en">Composition No. 10</dd>
+                            <dt>制作年</dt>
+                            <dd>1939-42</dd>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h3 class="title">12 線のコンポジション</h3>
+        </section>
+
+        <section class="section">
+            <h3 class="title">14 赤・青・白のコンポジション II</h3>
+        </section>
+
+        <section class="section">
+            <h3 class="title">15 ニューヨーク I</h3>
+        </section>
+
+        <section class="section">
+            <div class="card-container">
+                <div class="card">
+                    <div class="front">
+                        <h3 class="title">16 ヴィクトリー・ブギウギ</h3>
+                    </div>
+                    <div class="back js-modal-open" data-target="figure16">
+                        <img src="images/1080px-Piet_Mondriaan_Victory_Boogie_Woogie.jpg" srcset="images/720px-Piet_Mondriaan_Victory_Boogie_Woogie.jpg 559w,images/1080px-Piet_Mondriaan_Victory_Boogie_Woogie.jpg 959w" sizes="(max-width: 559px) 90vw, (max-width: 959px) 75vw" alt="ヴィクトリー・ブギウギ" title="ヴィクトリー・ブギウギ">
+                        <dl>
+                            <dt>題名</dt>
+                            <dd>ヴィクトリー・ブギウギ</dd>
+                            <dd lang="en">Victory Boogie Woogie</dd>
+                            <dt>制作年</dt>
+                            <dd>1942-44</dd>
+                            <dt>所蔵</dt>
+                            <dd>デン・ハーグ市立美術館</dd>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <small>Piet Mondrian の作品をモチーフにしたCSSギャラリー。詳細は README を参照。</small>
+            <script src="script/script.js"></script>
+        </footer>
+    </div>
+</body></html>

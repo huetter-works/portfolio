@@ -1,0 +1,240 @@
+@charset "utf-8";
+
+/*ベースルール*/
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    width: 100%;
+}
+
+/*モバイルのレイアウトルール*/
+
+.section,
+.profile {
+    width: 90%;
+    margin: 0 auto;
+}
+
+/*
+.outline {
+    border-left: 0.815vw solid black;
+}
+*/
+
+/*モバイルのモジュールルール*/
+.header {
+    border-left: 0.815vw solid black;
+}
+
+.header h1 {
+    padding: 1rem;
+    font-size: 2.5em;
+    margin: 0 0 0;
+}
+
+.header > p {
+    padding: 0 1rem 1rem;
+    margin: 0 0 0;
+}
+
+.title {
+    font-size: 1.8rem;
+    margin: 0;
+    padding: 1rem 1rem 0;
+    width: 100%;
+    height: 100%;
+    visibility: hidden;
+}
+
+.section,
+.profile article {
+    border-left: 0.815vw solid black;
+    border-bottom: 1.5rem solid black;
+    background-color: #e5eeeb;
+}
+
+.section p {
+    margin: 0 0 1rem;
+    padding: 1rem;
+}
+
+.section dl,
+.profile p,
+.profile article,
+.profile article dl {
+    padding: 1rem;
+}
+
+.modal-header {
+    background-color: #000;
+    color: #fff;
+    font-weight: bold;
+    padding: 10px 15px;
+}
+
+.contact-demo-note {
+    margin: 0;
+    padding: 0.75rem 1.5rem 0;
+    font-size: 0.85rem;
+    color: #666;
+}
+
+#contact form {
+    padding: 10px 30px 30px;
+    background-color: #fff;
+}
+
+#contact dt {
+    margin: 1rem 0.5rem 0.5rem;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    padding: 1rem;
+    width: 100%;
+}
+
+.back dl,
+.gallery-modal-content dl {
+    font-size: 1.2rem;
+    padding: 1rem 0rem 2rem;
+    margin: 0 auto;
+}
+
+.back dd:not(:first-of-type),
+.gallery-modal-content dd:not(:first-of-type) {
+    font-size: 0.9rem;
+    margin-top: 0.3rem;
+}
+
+.back > img {
+    width: auto;
+    height: auto;
+    max-width: 200px;
+    max-height: 150px;
+}
+
+.profile h2 {
+    font-size: 1.8rem;
+    /*    margin: 0;*/
+    padding: 1rem 1rem 0;
+}
+
+.profile dt {
+    float: left;
+}
+
+.profile dd {
+    margin: 0 0 1.5em 7em;
+}
+
+
+/*ブログモジュール*/
+#blog {
+    background-color: #fff;
+    border-left: 0.815vw solid black;
+}
+
+#blog dt {
+    background-color: black;
+    line-height: 2rem;
+    padding-left: 2rem;
+    color: #fff;
+    vertical-align: middle;
+}
+
+#blog dt + dd {
+    font-size: 1.8rem;
+    /* margin: 0; */
+    padding: 1rem 1rem 0;
+}
+
+#blog dd {
+    padding: 1rem;
+}
+
+/*ステートルール*/
+section:first-of-type,
+section:nth-of-type(2),
+section:nth-of-type(3) {
+    display: none;
+}
+
+#profile,
+.back dt,
+.gallery-modal-content dt,
+.hidden {
+    display: none;
+}
+
+/*一時ルール*/
+/*
+img {
+    width: 100px;
+}
+
+.section img {
+    width: 100px;
+}*/
+
+/*ボタンアニメーション*/
+
+/* トップ用 */
+.gnav-btn {
+    position: relative;
+    transition: all .5s;
+    outline: none;
+    overflow: hidden;
+    transition: 1s ease all;
+}
+
+.gnav-btn::before,
+.gnav-btn::after {
+    position: absolute;
+    display: block;
+    content: '';
+    width: 0;
+    height: 0;
+    transition: .4s ease all;
+    opacity: 0;
+}
+
+.gnav-btn::before {
+    top: 0;
+    left: 0;
+}
+
+.gnav-btn::after {
+    bottom: 0;
+    right: 0;
+}
+
+.gnav-btn:hover,
+.gnav-btn-accordion:hover {
+    background-color: #e5eeeb !important;
+    color: #000 !important;
+    transition: 1s ease all .2s;
+}
+
+.gnav-btn:hover::before,
+.gnav-btn:hover::after {
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    transition: .4s ease all;
+}
+
+.gnav .gnav-btn::before {
+    border-top: 2px solid #fff;
+    border-left: 2px solid #fff;
+}
+
+.gnav .gnav-btn::after {
+    border-right: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+}

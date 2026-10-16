@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Cafe Sample</title>
+    <meta name="description" content="架空カフェのレイアウト習作（ポートフォリオ用デモ）">
+    <link rel="stylesheet" href="./dist/css/main.css?v=mobile3">
+</head>
+<body>
+    <header class="Header FixLine__top Header__bg">
+        <div class="Header__head">
+            <h1 class="logo">Cafe Sample</h1>
+        </div>
+        <nav class="Header__body">
+            <ul class="Menu">
+                <li> <a class="Menu__item" href="#intro">About</a> </li>
+                <li> <a class="Menu__item" href="#cafe-menu">Cafe</a> </li>
+                <li> <a class="Menu__item" href="#gallery">Gallery</a> </li>
+                <li> <a class="Menu__item" href="#news">News & Event</a> </li>
+            </ul>
+        </nav>
+        <div class="FixLine"></div>
+    </header>
+    <main class="l-main">
+        <div class="ImageSlide Section">
+            <ul id="Slide" class="ImageSlide__main">
+                <li class="ImageSlide__item js-slide-item">
+                    <a href="#cafe-menu"><img class="ImageSlide__image" src="./dist/images/top/slide1.png" alt="about our coffee"></a>
+                </li>
+                <li class="ImageSlide__item js-slide-item">
+                    <a href="#cafe-menu"><img class="ImageSlide__image" src="./dist/images/top/slide2.png" alt="about our dish"></a>
+                </li>
+                <li class="ImageSlide__item js-slide-item">
+                    <a href="#cafe-menu"><img class="ImageSlide__image" src="./dist/images/top/slide3.png" alt="about our tea"></a>
+                </li>
+            </ul>
+            <div class="ImageSlide__sub">
+                <span class="ImageSlide__dot js-slide-point">image1</span>
+                <span class="ImageSlide__dot js-slide-point">image2</span>
+                <span class="ImageSlide__dot js-slide-point">image3</span>
+            </div>
+        </div>
+        <section class="Section" id="intro">
+            <div class="sectionLabel sectionLabel__intro">
+                <h2 class="sectionLabel__title">Introduction</h2>
+            </div>
+            <div class="Intro l-column">
+                <h2 class="Intro__head">笑顔あふれる、おいしい時間。大切な人と幸せ気分。</h2>
+                <div class="Intro__body">
+                    <p>
+                        店内の棚にはいろいろな本が置かれており、自由に読むことができます。<br>
+                        グリーンや魚に囲まれて、本を読みながらゆっくりした時間を過ごすのもよいものです。<br>
+                        ベビーカーのまま入店できるので、小さなお子様連れのママは大助かりです。<br>
+                        ママ友とのランチ会にいかが。食事をしながらゆっくりとおしゃべりをして、<br>
+                        好きに囲まれた空間で、自分らしさを充電しましょう。<br>
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section class="Section" id="cafe-menu">
+            <div class="sectionLabel sectionLabel__cafemenu">
+                <h2 class="sectionLabel__title">Cafe Menu</h2>
+            </div>
+            <div class="MenuList__head">
+                <h3 class="MenuList__label">Drinks Menu</h3>
+                <figure>
+                    <img class="MenuList__photo" src="./dist/images/menu_label/label_01_drink.png" alt="Drinks Menu">
+                </figure>
+            </div>
+
+            <dl class="MenuList l-column">
+                <div class="MenuList__item l-tripartitionColumn">
+                    <dt class="MenuList__name">コーヒー</dt>
+                    <dd class="MenuList__price">380円</dd>
+                    <dd class="MenuList__sup">hot</dd>
+                    <dd class="MenuList__image">
+                        <figure><img class="MenuList__photo" src="./dist/images/cafe_drink/cafe_drink_01_coffee.png" alt="Hot Coffee"></figure>
+                    </dd>
+                </div>
+                <div class="MenuList__item l-tripartitionColumn">
+                    <dt class="MenuList__name">エスプレッソ</dt>
+                    <dd class="MenuList__price">380円</dd>
+                    <dd class="MenuList__sup">hot</dd>
+                    <dd class="MenuList__image">
+                        <figure><img class="MenuList__photo" src="./dist/images/cafe_drink/cafe_drink_02_espresso.png" alt="Espresso"></figure>
+                    </dd>
+                </div>
+                <div class="MenuList__item l-tripartitionColumn">
+                    <dt class="MenuList__name">カフェラテ</dt>
+                    <dd class="MenuList__price">380円</dd>
+                    <dd class="MenuList__sup">cold</dd>
+                    <dd class="MenuList__image">
+                        <figure><img class="MenuList__photo" src="./dist/images/cafe_drink/cafe_drink_03_cafelatte.png" alt="Cafe Latte"></figure>
+                    </dd>
+                </div>
+                <div class="MenuList__item l-tripartitionColumn">
+                    <dt class="MenuList__name">紅茶</dt>
+                    <dd class="MenuList__price">380円</dd>
+                    <dd class="MenuList__sup">hot</dd>
+                    <dd class="MenuList__image">
+                        <figure><img class="MenuList__photo" src="./dist/images/cafe_drink/cafe_drink_04_tea.png" alt="Hot Tea"></figure>
+                    </dd>
+                </div>
+            </dl>
+
+            <div class="MenuList__head">
+                <h3 class="MenuList__label">Sweets Menu</h3>
+                <figure>
+                    <img class="MenuList__photo" src="./dist/images/menu_label/label_02_sweets.png" alt="Sweets Menu">
+                </figure>
+            </div>
+            <dl class="MenuList l-column">
+                <div class="MenuList__item l-tripartitionColumn">
+                    <dt class="MenuList__name">フォンダンショコラ</dt>
+                    <dd class="MenuList__price">400円</dd>
+                    <dd class="MenuList__image">
+                        <figure><img class="MenuList__photo" src="./dist/images/cafe_drink/cafe_drink_01_coffee.png" alt="フォンダンショコラ（レイアウト用ダミー画像）"></figure>
+                    </dd>
+                </div>
+                <div class="MenuList__item l-tripartitionColumn">
+                    <dt class="MenuList__name">ショコラ</dt>
+                    <dd class="MenuList__price">400円</dd>
+                    <dd class="MenuList__sup">hot</dd>
+                    <dd class="MenuList__image">
+                        <figure><img class="MenuList__photo" src="./dist/images/cafe_drink/cafe_drink_02_espresso.png" alt="ショコラ（レイアウト用ダミー画像）"></figure>
+                    </dd>
+                </div>
+                <div class="MenuList__item l-tripartitionColumn">
+                    <dt class="MenuList__name">チーズケーキ</dt>
+                    <dd class="MenuList__price">400円</dd>
+                    <dd class="MenuList__image">
+                        <figure><img class="MenuList__photo" src="./dist/images/cafe_drink/cafe_drink_03_cafelatte.png" alt="チーズケーキ（レイアウト用ダミー画像）"></figure>
+                    </dd>
+                </div>
+                <div class="MenuList__item l-tripartitionColumn">
+                    <dt class="MenuList__name">マロンケーキ</dt>
+                    <dd class="MenuList__price">400円</dd>
+                    <dd class="MenuList__image">
+                        <figure><img class="MenuList__photo" src="./dist/images/cafe_drink/cafe_drink_04_tea.png" alt="マロンケーキ（レイアウト用ダミー画像）"></figure>
+                    </dd>
+                </div>
+            </dl>
+
+
+            <div class="MenuList__head">
+                <h3 class="MenuList__label">Foods Menu</h3>
+                <figure>
+                    <img class="MenuList__photo" src="./dist/images/menu_label/label_03_foods.png" alt="Foods Menu">
+                </figure>
+            </div>
+            <dl class="MenuList l-column">
+                <div class="MenuList__item l-tripartitionColumn">
+                    <dt class="MenuList__name">カレー（サラダ付）</dt>
+                    <dd class="MenuList__price">880円</dd>
+                    <dd class="MenuList__sup">オリジナルブレンドされた15種類のスパイスが使われた自家製カレー。野菜、肉、果物が10時間かけてじっくりと煮込まれており、コクがあるのに胃がもたれないヘルシーな一品です。</dd>
+                    <dd class="MenuList__image">
+                        <figure><img class="MenuList__photo" src="./dist/images/cafe_drink/cafe_drink_01_coffee.png" alt="カレー（レイアウト用ダミー画像）"></figure>
+                    </dd>
+                </div>
+                <div class="MenuList__item l-tripartitionColumn">
+                    <dt class="MenuList__name">デミオムライス（サラダ付）</dt>
+                    <dd class="MenuList__price">930円</dd>
+                    <dd class="MenuList__sup">濃厚デミグラスソース！！</dd>
+                    <dd class="MenuList__image">
+                        <figure><img class="MenuList__photo" src="./dist/images/cafe_drink/cafe_drink_02_espresso.png" alt="デミオムライス（レイアウト用ダミー画像）"></figure>
+                    </dd>
+                </div>
+                <div class="MenuList__item l-tripartitionColumn">
+                    <dt class="MenuList__name">ボンゴレ（サラダ・パン付）</dt>
+                    <dd class="MenuList__price">930円</dd>
+                    <dd class="MenuList__sup">アサリが入った特製ボンゴレパスタです。</dd>
+                    <dd class="MenuList__image">
+                        <figure><img class="MenuList__photo" src="./dist/images/cafe_drink/cafe_drink_03_cafelatte.png" alt="ボンゴレ（レイアウト用ダミー画像）"></figure>
+                    </dd>
+                </div>
+                <div class="MenuList__item l-tripartitionColumn">
+                    <dt class="MenuList__name">プレートランチ</dt>
+                    <dd class="MenuList__price">1,300円</dd>
+                    <dd class="MenuList__sup">気まぐれプレートランチ♪
+                        セット内容《前菜・サラダ・スープ・バケット（おかわり自由）or ライス・メイン・デザート・ドリンク》</dd>
+                    <dd class="MenuList__image">
+                        <figure><img class="MenuList__photo" src="./dist/images/cafe_drink/cafe_drink_04_tea.png" alt="プレートランチ（レイアウト用ダミー画像）"></figure>
+                    </dd>
+                </div>
+            </dl>
+
+        </section>
+        <section class="Section" id="gallery">
+            <div class="sectionLabel sectionLabel__gallery">
+                <h2 class="sectionLabel__title">Gallery</h2>
+            </div>
+            <div class="Gallery l-column">
+                <div class="Gallery__body">
+                    <p>
+                        店内の雰囲気を伝えるためのセクションです。<br>
+                        本サンプルではギャラリー写真を掲載していません（レイアウト確認用のダミー構成）。
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section class="Section" id="news">
+            <div class="sectionLabel sectionLabel__news">
+                <h2 class="sectionLabel__title">News & Event</h2>
+            </div>
+            <div class="News l-column">
+                <ol class="NewsList">
+                    <li class="NewsList__item">
+                        <time class="NewsList__head" datetime="2021-11-11">2021.11.11</time>
+                        <span class="NewsList__body">
+                            【サンプル】臨時休業のお知らせ<br>
+                            下記日程を臨時休業とさせていただきます。<br>
+                            ご不便をおかけいたしますが、何卒ご理解のほどよろしくお願いいたします。<br>
+                            11/11, 11/22
+                        </span>
+                    </li>
+                    <li class="NewsList__item">
+                        <time class="NewsList__head" datetime="2021-10-01">2021.10.01</time>
+                        <span class="NewsList__body">
+                            【サンプル】秋のスイーツメニューを追加しました。<br>
+                            ※架空店舗のデモ用お知らせです。
+                        </span>
+                    </li>
+                </ol>
+            </div>
+        </section>
+    </main>
+    <footer class="Footer">
+        <div class="l-row l-column">
+            <div class="Footer__head">
+                <a href="./" class="logo">Cafe Sample</a>
+                <ul class="Menu Menu--sub">
+                    <li> <a class="Menu__item" href="#intro">About</a> </li>
+                    <li> <a class="Menu__item" href="#cafe-menu">Cafe</a> </li>
+                    <li> <a class="Menu__item" href="#gallery">Gallery</a> </li>
+                    <li> <a class="Menu__item" href="#news">News & Event</a> </li>
+                </ul>
+            </div>
+            <div class="Footer__body">
+                <p>架空カフェのレイアウト習作（ポートフォリオ用デモ）。実在の店舗ではありません。</p>
+                <p>Legal Notice / Privacy policy はデモのため未掲載です。詳細は README を参照。</p>
+            </div>
+            <p class="Footer__body">以下の SNS アイコンはレイアウト用です。リンク先はありません。</p>
+            <ul class="Footer__foot SNS">
+                <li class="SNS__item"><a class="fa fa-facebook-official" href="#intro" aria-label="Facebook（デモ）"><span class="SNS__text">Facebook</span></a></li>
+                <li class="SNS__item"><a class="fa fa-youtube-square" href="#intro" aria-label="Youtube（デモ）"><span class="SNS__text">Youtube</span></a></li>
+                <li class="SNS__item"><a class="fa fa-twitter-square" href="#intro" aria-label="Twitter（デモ）"><span class="SNS__text">Twitter</span></a></li>
+                <li class="SNS__item"><a class="fa fa-linkedin-square" href="#intro" aria-label="LinkedIn（デモ）"><span class="SNS__text">LinkedIn</span></a></li>
+                <li class="SNS__item"><a class="fa fa-flickr" href="#intro" aria-label="Flickr（デモ）"><span class="SNS__text">Flickr</span></a></li>
+                <li class="SNS__item"><a class="fa fa-instagram" href="#intro" aria-label="Instagram（デモ）"><span class="SNS__text">Instagram</span></a></li>
+                <li class="SNS__item"><a class="fa fa-yelp" href="#intro" aria-label="Yelp（デモ）"><span class="SNS__text">Yelp</span></a></li>
+            </ul>
+        </div>
+
+    </footer>
+    <script src="./dist/js/main.min.js">
+    </script>
+    <script>
+        imageSlide('Slide', { extra: 2 });
+    </script>
+</body>
+</html>

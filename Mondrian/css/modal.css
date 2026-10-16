@@ -1,0 +1,117 @@
+@charset "utf-8";
+
+/*
+
+.content {
+    margin: 0 auto;
+    padding: 40px;
+}
+*/
+
+/* モーダルウィンドウのレイアウトルール */
+
+.blog-modal {
+    height: auto;
+    width: auto;
+    min-height: 100%;
+    min-width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+
+.contact-modal,
+.gallery-modal,
+.gallery-modal-mobile,
+.modal-overlay {
+    /*    display: block;*/
+    height: auto;
+    width: auto;
+    min-height: 100%;
+    min-width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+
+/*.modal-overlay,*/
+#contact,
+.gallery-modal-content,
+.gallery-modal-mobile img {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#blog {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 11;
+}
+
+/* モーダルウィンドウのモジュールごとのルール */
+.modal-overlay {
+
+    /*
+    height: 100%;
+    width: 100%;
+
+    position: fixed;
+*/
+    background: rgba(0, 0, 0, 0.85);
+}
+
+
+#contact {
+    /*
+    width: 10%;
+    height: 10%;
+*/
+
+    /*    opacity: 0;*/
+    width: 80%;
+    max-width: 800px;
+    max-height: 800px;
+    z-index: 11;
+    /*    overflow: hidden;*/
+}
+
+/*ギャラリー用*/
+
+/* 最大表示幅を設定 */
+.gallery-modal-content {
+    background: #fff;
+    padding: 2rem 2rem 0rem;
+    width: auto;
+    height: auto;
+    max-height: 95%;
+    max-width: 95vh;
+    overflow: hidden;
+    z-index: 11;
+}
+
+.gallery-modal-content img {
+    display: block;
+    margin: 0 auto;
+    width: auto;
+    height: auto;
+    max-width: 90%;
+    max-height: 90vh;
+    z-index: 11;
+}
+
+.gallery-modal-mobile img {
+    background: #fff;
+    padding: 1rem;
+    width: auto;
+    height: auto;
+    max-height: 95%;
+    max-width: 95vh;
+    overflow: hidden;
+    z-index: 11;
+}

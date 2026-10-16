@@ -1,0 +1,95 @@
+@charset "utf-8";
+
+.gnav {
+    display: flex;
+    height: 2rem;
+    padding: 0;
+    margin: 0 auto;
+    width: 100%;
+    justify-content: stretch;
+}
+
+.gnav > li {
+    /*親階層のみ幅を25%にする*/
+    padding: 0;
+    width: 100%;
+}
+
+
+/*全てのリスト・リンク共通*/
+.gnav ul,
+.gnav li {
+    padding: 0;
+    list-style: none;
+    position: inherit;
+    color: #fff;
+    background-color: #000;
+}
+
+.gnav > li {
+    border-right: 1px solid #fff;
+}
+
+.gnav li a,
+.gnav li .modal-btn {
+    background-color: #000;
+
+    color: #fff;
+    display: block;
+    height: 2rem;
+    line-height: 2rem;
+    text-align: center;
+    text-decoration: none;
+    width: 100%;
+    cursor: pointer;
+}
+
+.gnav li li {
+    height: 0;
+    overflow: hidden;
+    transition: .5s;
+}
+
+/*
+.gnav li li a,
+.gnav-index li li a {
+    border-top: 1px solid #fff;
+}
+*/
+
+.gnav li:hover > ul > li {
+    height: 2.4rem;
+    overflow: visible;
+    font-size: 0.9rem;
+    padding: 0.25rem;
+    overflow: visible;
+    border-top: 1px solid #fff;
+    position: relative;
+}
+
+@media screen and (min-width: 560px) {
+
+    .l-body .gnav ul,
+    .l-body .gnav li {
+        color: #000;
+        background-color: #ec3e1e00;
+        border-right: none;
+    }
+
+
+    .l-body .gnav li a,
+    .l-body .gnav li .modal-btn {
+        background-color: #ec3e1e00;
+        border-right: none;
+        color: #000;
+    }
+
+    .l-body .gnav li:hover > ul > li {
+        border-top: 1px solid #000;
+        background-color: #ec3e1e;
+        position: relative;
+        z-index: 5;
+    }
+
+
+}

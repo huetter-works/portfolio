@@ -1,0 +1,102 @@
+@charset "utf-8";
+
+
+/*
+.title {
+    width: 100%;
+    height: 100%;
+    visibility: hidden;
+}
+*/
+
+section > .modal-btn,
+section > a > h2 {
+    padding: 1rem;
+    font-size: 1.8em;
+    margin: 0 0 0;
+}
+
+
+section > .modal-btn {
+    color: #fff;
+    cursor: pointer;
+}
+
+section > a > h2 {
+    color: #000;
+}
+
+section > a {
+    text-decoration: none;
+}
+
+
+
+/*ボタンアニメーション*/
+/*
+.gnav-btn:hover,
+.gnav-btn-accordion:hover {
+    background: #000 !important;
+    color: #fff !important;
+}*/
+
+.gnav-btn:hover,
+.gnav-btn-accordion:hover {
+    background-color: #000 !important;
+    color: #fff !important;
+}
+
+.gnav .gnav-btn::before {
+    border-top: 2px solid #000;
+    border-left: 2px solid #000;
+}
+
+.gnav .gnav-btn::after {
+    border-right: 2px solid #000;
+    border-bottom: 2px solid #000;
+}
+
+
+/* profile */
+section > a > .gnav-btn {
+    transition: 1.6s ease all;
+}
+
+section > a > .gnav-btn:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+section > a > .gnav-btn::before {
+    border-top: 0.2rem solid #fff;
+    border-left: 0.2rem solid #fff;
+    transition: .8s ease all;
+}
+
+section > a > .gnav-btn::after {
+    border-right: 0.2rem solid #fff;
+    border-bottom: 0.2rem solid #fff;
+    transition: .8s ease all;
+}
+
+/* contact */
+section > .gnav-btn {
+    transition: 1.6s ease all;
+}
+
+section > .gnav-btn:hover {
+    background-color: #e5eeeb !important;
+    color: #000 !important;
+}
+
+section > .gnav-btn::before {
+    border-top: 0.2rem solid #fff;
+    border-left: 0.2rem solid #fff;
+    transition: .8s ease all;
+}
+
+section > .gnav-btn::after {
+    border-right: 0.2rem solid #fff;
+    border-bottom: 0.2rem solid #fff;
+    transition: .8s ease all;
+}

@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex, nofollow">
-  <meta name="description" content="静的フロントエンドのポートフォリオ習作">
+  <meta name="description" content="EC運営・Web制作・データ分析の実績をまとめたポートフォリオ">
   <title>huetter-works / Portfolio</title>
   <style>
     :root {
@@ -30,15 +30,31 @@
       padding: 4rem 1.5rem 5rem;
     }
     h1 {
-      margin: 0 0 0.5rem;
+      margin: 0 0 0.35rem;
       font-size: clamp(1.8rem, 5vw, 2.4rem);
       font-weight: 600;
       letter-spacing: 0.04em;
     }
-    .lede {
-      margin: 0 0 2.75rem;
+    .tagline {
+      margin: 0 0 1.5rem;
       color: var(--muted);
-      line-height: 1.7;
+      font-size: 0.95rem;
+      letter-spacing: 0.06em;
+    }
+    .about {
+      margin: 0 0 2.75rem;
+      padding-bottom: 2rem;
+      border-bottom: 1px solid var(--line);
+    }
+    .about p {
+      margin: 0 0 0.9rem;
+      color: var(--ink);
+      line-height: 1.85;
+    }
+    .about p:last-child {
+      margin-bottom: 0;
+      color: var(--muted);
+      font-size: 0.95rem;
     }
     section {
       margin-bottom: 2.5rem;
@@ -91,8 +107,20 @@
 </head>
 <body>
   <main>
-    <h1>Portfolio</h1>
-    <p class="lede">フロントエンド習作、Illustrator 作品、分析ツールの公開デモです。実在の店舗・サービスではありません。</p>
+    <h1>huetter-works</h1>
+    <p class="tagline">Portfolio</p>
+
+    <div class="about">
+      <p>
+        EC運営・Web制作・データ分析・業務改善のためのツール制作に関する実績をまとめたポートフォリオです。
+      </p>
+      <p>
+        ECサイトの商品ページ制作やデータ管理の経験をもとに、HTML/CSS による Web 制作、Illustrator による画像制作、Python によるデータ分析や業務向けツールの試作などに取り組んでいます。業務上の課題を技術で検証し、改善につなげることを目指しています。
+      </p>
+      <p>
+        掲載作品はいずれも個人制作です。実在の店舗・公式サービスではありません。
+      </p>
+    </div>
 
     <section>
       <h2>Web / Front-end</h2>

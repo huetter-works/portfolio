@@ -32,8 +32,10 @@ BSR は需要センサーとして扱い、順位から換算した数値は「�
 
 ## デモについて
 
-[`interactive_ranking_predictions.html`](interactive_ranking_predictions.html) は、操作確認用の**小規模サンプル**です。  
-ASIN 数を絞った BSR 系列の予測グラフで、グラフの切替や絞り込みを試せます。
+[`interactive_ranking_predictions.html`](interactive_ranking_predictions.html) は、操作確認用の**小規模・過去サンプル**です。  
+ASIN 数を絞った BSR 系列の予測グラフで、グラフの切替や絞り込みを試せます。  
+表示される ASIN は Amazon 上で公開されている商品識別子で、本番運用の全件ではありません。  
+Plotly 埋め込みのためファイルが大きく、読み込みに少し時間がかかることがあります。
 
 ---
 

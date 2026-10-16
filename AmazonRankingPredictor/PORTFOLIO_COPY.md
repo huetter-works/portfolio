@@ -1,31 +1,19 @@
 # ポートフォリオ掲載用文案
 
 [huetter-works Portfolio](https://huetter-works.github.io/portfolio/) の一覧、またはリンク先の個別ページに貼る用です。
-URL はデプロイ後の実際のパスに差し替えてください。
+公開ページの文言が正です。このファイルは控えです。
 
 ---
 
 ## 一覧用（短い説明・1〜2行）
 
-Amazon Ranking Predictor — 全巻セット仕入れ向けに、Amazon の BSR 履歴から Prophet で推移を予測し Plotly で可視化する Python ツール（公開デモは合成データ）
+Amazon Ranking Predictor — 全巻セット仕入れ向けに、Amazon の BSR 履歴から Prophet で推移を予測し Plotly で可視化する Python ツール（公開デモは小規模・過去サンプル。限界も含めて紹介）
 
 ---
 
 ## 個別ページ用（本文）
 
-### 見出し
-
-Amazon Ranking Predictor
-
-### リード（そのまま使える文）
-
-コミックの全巻セットを扱っています。需要が一気に立ち上がると、全巻を揃えて仕入れるのは難しくなります。欠品や重版待ちが重なる前に、いち早く需要の兆しを掴みたい——そのために作ったのがこのツールです。
-
-公開されている Amazon の BSR（Best Sellers Rank）の推移を参考に、需要予測の手がかりにできないかと考えました。販売数そのものではなく、順位の動きから「今、何を注視すべきか」を見やすくします。
-
-具体的には、取得した BSR データを Python で処理し、Prophet で短期の推移を予測し、Plotly でインタラクティブなグラフにしています。発注数や確定売上を自動で出すものではなく、仕入れ判断の参考用です。
-
-公開デモは合成データです。実在の商品や本番の予測結果は含みません。
+公開中の [`index.html`](./index.html) / [`overview.html`](./overview.html) を参照。
 
 ### 技術
 
@@ -35,28 +23,8 @@ Amazon Ranking Predictor
 
 ### リンク欄（文言例）
 
-- インタラクティブデモ（合成データ） → `（デモ HTML の URL）`
-- 紹介概要 → `（OVERVIEW.md を GitHub Pages 等で出した URL、またはリポジトリ内パス）`
-
----
-
-## ポートフォリオ TOP の一文差し込み例
-
-既存の導入文のあとに、プロジェクト行として足す例です。
-
-```text
-* Amazon Ranking Predictor
-  全巻セット仕入れ向けの BSR 予測ビューア（Python / Prophet / Plotly）。公開デモは合成データです。
-```
-
-または:
-
-```html
-<li>
-  <a href="（個別ページまたはデモへの URL）">Amazon Ranking Predictor</a>
-  — 全巻セット仕入れ向けに、BSR から Prophet で推移を予測し Plotly で可視化する Python ツール（デモは合成データ）
-</li>
-```
+- インタラクティブデモ（やや重い） → デモ HTML の URL
+- 紹介概要 → overview.html
 
 ---
 
@@ -66,5 +34,5 @@ Amazon Ranking Predictor
 | -------------------- | -------------------------------------- |
 | 需要を正確に予測する | 需要の兆しを見立てる／判断の参考にする |
 | 売上を予測する       | BSR の推移を予測する                   |
-| 実データデモ         | 公開デモは合成データ                   |
+| 合成データデモ       | 小規模・過去サンプル（公開 ASIN）      |
 | API で自動発注       | 発注数は自動化しない                   |

@@ -7,6 +7,7 @@
 - トップ: https://huetter-works.github.io/portfolio/
 - Mondrian: https://huetter-works.github.io/portfolio/Mondrian/
 - Cafe Sample: https://huetter-works.github.io/portfolio/CafeSample/
+- Illustration: https://huetter-works.github.io/portfolio/Illustration/
 
 ## 作品
 
@@ -14,6 +15,7 @@
 |----------|------|
 | [Mondrian](./Mondrian/) | CSS Grid でモンドリアンの画面構成を模したギャラリー |
 | [CafeSample](./CafeSample/) | 架空カフェの1ページレイアウト習作 |
+| [Illustration](./Illustration/) | 年賀状（個人制作）と職業訓練時のWebバナー |
 
 各フォルダの詳細は、それぞれの `README.md` を参照してください。
 

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Adobe Illustrator による個人制作・訓練課題のイラスト">
+  <title>Illustration — huetter-works / Portfolio</title>
+  <style>
+    :root {
+      --bg: #f4f1ec;
+      --ink: #1c1b19;
+      --muted: #5c574f;
+      --line: #d9d2c7;
+      --accent: #b85c38;
+      --card: #fffcf7;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: "Hiragino Mincho ProN", "Yu Mincho", "Noto Serif JP", serif;
+      color: var(--ink);
+      background:
+        radial-gradient(ellipse at top left, #fff8ef 0%, transparent 55%),
+        linear-gradient(160deg, var(--bg), #e8e2d8);
+    }
+    main {
+      max-width: 52rem;
+      margin: 0 auto;
+      padding: 3rem 1.25rem 4rem;
+    }
+    .nav {
+      margin-bottom: 1.5rem;
+      font-size: 0.9rem;
+    }
+    .nav a { color: var(--muted); }
+    h1 {
+      margin: 0 0 0.5rem;
+      font-size: clamp(1.6rem, 4vw, 2.2rem);
+      font-weight: 600;
+      letter-spacing: 0.04em;
+    }
+    .lede {
+      margin: 0 0 2rem;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+    .works {
+      display: grid;
+      gap: 2rem;
+    }
+    article {
+      background: var(--card);
+      border: 1px solid var(--line);
+      padding: 0.85rem 0.85rem 1.1rem;
+    }
+    figure {
+      margin: 0;
+    }
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+      vertical-align: middle;
+    }
+    figcaption {
+      margin-top: 0.85rem;
+      padding: 0 0.15rem;
+    }
+    .title {
+      margin: 0 0 0.35rem;
+      font-size: 1.1rem;
+      font-weight: 600;
+    }
+    .meta {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.9rem;
+      line-height: 1.65;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <p class="nav"><a href="../">← Portfolio</a></p>
+    <h1>Illustration</h1>
+    <p class="lede">
+      Adobe Illustrator で制作した作品です。年賀状は個人制作、バナーは職業訓練時の課題です。
+    </p>
+    <div class="works">
+      <article>
+        <figure>
+          <img src="./images/nengajo-dog-gem.jpg" alt="戌年の年賀状。宝石のなかに犬のシルエット" width="640" height="480" loading="lazy">
+          <figcaption>
+            <h2 class="title">年賀状（戌年）</h2>
+            <p class="meta">個人制作 / Adobe Illustrator<br>宝石モチーフのなかに戌（犬）を忍ばせた年賀状。</p>
+          </figcaption>
+        </figure>
+      </article>
+      <article>
+        <figure>
+          <img src="./images/nengajo-2017-iceland.jpg" alt="2017年 アイスランド語の年賀状 Gleðilegt nýtt ár" width="1024" height="690" loading="lazy">
+          <figcaption>
+            <h2 class="title">年賀状（2017）</h2>
+            <p class="meta">個人制作 / Adobe Illustrator<br>「Gleðilegt nýtt ár」（アイスランド語の新年の挨拶）と雄鶏モチーフ。</p>
+          </figcaption>
+        </figure>
+      </article>
+      <article>
+        <figure>
+          <img src="./images/nengajo-2016-egypt.jpg" alt="2016年 エジプトモチーフの年賀状" width="1024" height="690" loading="lazy">
+          <figcaption>
+            <h2 class="title">年賀状（2016）</h2>
+            <p class="meta">個人制作 / Adobe Illustrator<br>古代エジプトをモチーフにした年賀状。</p>
+          </figcaption>
+        </figure>
+      </article>
+      <article>
+        <figure>
+          <img src="./images/banner-aztec.jpg" alt="アステカモチーフのホームページ用バナー" width="1024" height="624" loading="lazy">
+          <figcaption>
+            <h2 class="title">ホームページ用バナー</h2>
+            <p class="meta">職業訓練時の課題 / Adobe Illustrator<br>アステカ風のパターンと人物を用いたWebバナー。</p>
+          </figcaption>
+        </figure>
+      </article>
+    </div>
+  </main>
+</body>
+</html>

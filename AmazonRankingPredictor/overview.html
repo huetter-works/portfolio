@@ -144,17 +144,13 @@
       BSR は需要センサーとして扱い、順位から換算した数値は「推定」と明示します。確認された販売数としては扱いません。
     </p>
 
-    <h2>公開デモについて</h2>
+    <h2>デモについて</h2>
     <p>
-      <a href="./interactive_ranking_predictions.html" target="_blank" rel="noopener noreferrer">interactive_ranking_predictions.html</a>
-      は、通常のテスト実行で出した<strong>小規模サンプル</strong>です。
-      ASIN 数を絞った BSR 系列の予測グラフで、本番フルレポートや社内配信とは別物です。認証情報は埋め込みません。
-    </p>
-    <p>
-      ブラウザで開き、グラフ操作を確認できます（Plotly.js は HTML 内に埋め込み）。
+      <a href="./interactive_ranking_predictions.html" target="_blank" rel="noopener noreferrer">インタラクティブデモ</a>
+      は、操作確認用の<strong>小規模サンプル</strong>です。ASIN 数を絞った BSR 系列の予測グラフで、グラフの切替や絞り込みを試せます。
     </p>
 
-    <h2>技術スタック（公開説明用）</h2>
+    <h2>技術</h2>
     <table>
       <tr><th>項目</th><th>内容</th></tr>
       <tr><td>言語</td><td>Python</td></tr>
@@ -163,18 +159,11 @@
       <tr><td>入力</td><td>日次の BSR 履歴（CSV）</td></tr>
     </table>
     <p>
-      内部には供給状態の可視化、注目度の並べ替え、定型の仕入れ判定ラベル、運用用の Sheets／非公開配信などもありますが、紹介の中心は上記の「BSR → 予測 → グラフ」です。
+      紹介の中心は上記の「BSR → 予測 → グラフ」です。画面では供給状態の可視化や注目度の並べ替えなども試せます。
     </p>
 
-    <h2>公開時の注意</h2>
-    <ul>
-      <li>認証情報・社内 URL・本番フルレポートは公開しない</li>
-      <li>デモはテスト実行の小規模 HTML であり、運用全体の結果ではない</li>
-      <li>「正確に需要を当てる」ではなく、「仕入れ判断の参考にする」と説明する</li>
-    </ul>
-
     <p class="note">
-      Amazon 公式・提携のサービスではありません。
+      仕入れ判断の参考用であり、需要を正確に当てるものではありません。Amazon 公式・提携のサービスではありません。
     </p>
 
     <div class="actions">

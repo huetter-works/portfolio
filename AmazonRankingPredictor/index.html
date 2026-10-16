@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Amazon Ranking Predictor — BSR 予測ビューアの紹介（公開デモは合成データ）">
+  <title>Amazon Ranking Predictor — huetter-works / Portfolio</title>
+  <style>
+    :root {
+      --bg: #f4f1ec;
+      --ink: #1c1b19;
+      --muted: #5c574f;
+      --line: #d9d2c7;
+      --accent: #b85c38;
+      --card: #fffcf7;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: "Hiragino Mincho ProN", "Yu Mincho", "Noto Serif JP", serif;
+      color: var(--ink);
+      background:
+        radial-gradient(ellipse at top left, #fff8ef 0%, transparent 55%),
+        linear-gradient(160deg, var(--bg), #e8e2d8);
+    }
+    main {
+      max-width: 40rem;
+      margin: 0 auto;
+      padding: 3rem 1.25rem 4rem;
+    }
+    .nav {
+      margin-bottom: 1.5rem;
+      font-size: 0.9rem;
+    }
+    .nav a { color: var(--muted); }
+    h1 {
+      margin: 0 0 1.25rem;
+      font-size: clamp(1.5rem, 4vw, 2rem);
+      font-weight: 600;
+      letter-spacing: 0.03em;
+      line-height: 1.35;
+    }
+    .lead {
+      margin: 0 0 1.1rem;
+      line-height: 1.85;
+      color: var(--ink);
+    }
+    .note {
+      margin: 1.5rem 0 0;
+      padding: 0.9rem 1rem;
+      background: var(--card);
+      border: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 0.92rem;
+      line-height: 1.7;
+    }
+    h2 {
+      margin: 2rem 0 0.75rem;
+      font-size: 1.05rem;
+      font-weight: 600;
+    }
+    ul.tech {
+      margin: 0;
+      padding-left: 1.2rem;
+      line-height: 1.8;
+      color: var(--muted);
+    }
+    .actions {
+      margin-top: 2.25rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--line);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem 1rem;
+      align-items: center;
+    }
+    .cta {
+      display: inline-block;
+      padding: 0.7rem 1.15rem;
+      background: var(--ink);
+      color: #fff;
+      text-decoration: none;
+      font-size: 0.95rem;
+      letter-spacing: 0.02em;
+    }
+    .cta:hover { background: var(--accent); }
+    .secondary {
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <p class="nav"><a href="../">← Portfolio</a></p>
+    <h1>Amazon Ranking Predictor</h1>
+
+    <p class="lead">
+      コミックの全巻セットを扱っています。需要が一気に立ち上がると、全巻を揃えて仕入れるのは難しくなります。欠品や重版待ちが重なる前に、いち早く需要の兆しを掴みたい——そのために作ったのがこのツールです。
+    </p>
+    <p class="lead">
+      公開されている Amazon の BSR（Best Sellers Rank）の推移を参考に、需要予測の手がかりにできないかと考えました。販売数そのものではなく、順位の動きから「今、何を注視すべきか」を見やすくします。
+    </p>
+    <p class="lead">
+      具体的には、取得した BSR データを Python で処理し、Prophet で短期の推移を予測し、Plotly でインタラクティブなグラフにしています。発注数や確定売上を自動で出すものではなく、仕入れ判断の参考用です。
+    </p>
+
+    <p class="note">
+      公開デモは合成データです。実在の商品や本番の予測結果は含みません。Amazon 公式・提携のサービスではありません。
+    </p>
+
+    <h2>技術</h2>
+    <ul class="tech">
+      <li>Python</li>
+      <li>Prophet（時系列予測）</li>
+      <li>Plotly（インタラクティブ HTML）</li>
+    </ul>
+
+    <div class="actions">
+      <a class="cta" href="./interactive_ranking_predictions.html">インタラクティブデモを見る（合成データ）</a>
+      <a class="secondary" href="./OVERVIEW.md">紹介概要（Markdown）</a>
+    </div>
+  </main>
+</body>
+</html>

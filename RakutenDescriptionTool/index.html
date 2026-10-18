@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="description" content="楽天商品説明文変換ツール — 店舗ごとの説明 HTML を生成する業務ツールの紹介">
+  <title>楽天商品説明文変換ツール — huetter-works / Portfolio</title>
+  <style>
+    :root {
+      --bg: #f4f1ec;
+      --ink: #1c1b19;
+      --muted: #5c574f;
+      --line: #d9d2c7;
+      --accent: #b85c38;
+      --card: #fffcf7;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: "Hiragino Mincho ProN", "Yu Mincho", "Noto Serif JP", serif;
+      color: var(--ink);
+      background:
+        radial-gradient(ellipse at top left, #fff8ef 0%, transparent 55%),
+        linear-gradient(160deg, var(--bg), #e8e2d8);
+    }
+    main {
+      max-width: 44rem;
+      margin: 0 auto;
+      padding: 3rem 1.25rem 4rem;
+    }
+    .nav {
+      margin-bottom: 1.5rem;
+      font-size: 0.9rem;
+    }
+    .nav a { color: var(--muted); }
+    h1 {
+      margin: 0 0 1.25rem;
+      font-size: clamp(1.45rem, 4vw, 1.95rem);
+      font-weight: 600;
+      letter-spacing: 0.03em;
+      line-height: 1.35;
+    }
+    .lead {
+      margin: 0 0 1.1rem;
+      line-height: 1.85;
+    }
+    .note {
+      margin: 1.5rem 0 0;
+      padding: 0.9rem 1rem;
+      background: var(--card);
+      border: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 0.92rem;
+      line-height: 1.7;
+    }
+    h2 {
+      margin: 2.25rem 0 0.75rem;
+      font-size: 1.05rem;
+      font-weight: 600;
+    }
+    ul.tech, ul.feats {
+      margin: 0;
+      padding-left: 1.2rem;
+      line-height: 1.8;
+      color: var(--muted);
+    }
+    figure {
+      margin: 1rem 0 0;
+      padding: 0.65rem;
+      background: var(--card);
+      border: 1px solid var(--line);
+    }
+    figure img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+    figcaption {
+      margin-top: 0.65rem;
+      padding: 0 0.15rem 0.15rem;
+      color: var(--muted);
+      font-size: 0.9rem;
+      line-height: 1.65;
+    }
+    .shot-title {
+      display: block;
+      margin-bottom: 0.25rem;
+      color: var(--ink);
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+    .actions {
+      margin-top: 2.25rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--line);
+    }
+    .actions a {
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <p class="nav"><a href="../">← Portfolio</a></p>
+    <h1>楽天商品説明文変換ツール</h1>
+
+    <p class="lead">
+      楽天市場向けの商品説明 HTML を、店舗ごとのテンプレート・色・挿入リンクに合わせて生成するブラウザツールです。プレーンテキスト（と簡単な記法）から、PC 用・スマートフォン用の説明文を一括で作り、クリップボードへコピーできます。
+    </p>
+    <p class="lead">
+      店舗ごとに表レイアウトや注記が違い、手作業の HTML 編集が負担になりやすい——同じ商品情報を複数店舗向けに作り直すときの表記ゆれや漏れを減らすために作りました。
+    </p>
+
+    <h2>主な機能</h2>
+    <ul class="feats">
+      <li>複数店舗（店舗ごとに色・オプション・テンプレート）</li>
+      <li>商品名・あらすじ・仕様のテキストから HTML 化</li>
+      <li>あらすじの部分装飾（太字、色・サイズなど）</li>
+      <li>関連商品ブロックや定型リンクの差し込み</li>
+      <li>プレビュー確認後、楽天 PC／SP 用を用途別にコピー</li>
+    </ul>
+
+    <h2>工夫した点</h2>
+    <ul class="feats">
+      <li>店舗差分を設定ファイルに寄せ、UI は共通のまま運用できる形にした</li>
+      <li>あらすじ装飾の入れ子・閉じ忘れなどを検出し、変換を安定化した</li>
+      <li>変換失敗時はプレビューにエラーを出し、前回 HTML の誤表示を防ぐ</li>
+    </ul>
+
+    <h2>画面</h2>
+
+    <figure>
+      <img src="./images/01-input.png" alt="入力画面。店舗選択と商品名・あらすじなどの入力欄" width="1200" height="800" loading="lazy">
+      <figcaption>
+        <span class="shot-title">1. 入力</span>
+        店舗を選び、商品名・あらすじ・仕様などを入力します。店舗ごとに色設定を変えられます。
+      </figcaption>
+    </figure>
+
+    <figure>
+      <img src="./images/02-preview.png" alt="プレビュー画面。生成された商品説明の見た目確認" width="1200" height="800" loading="lazy">
+      <figcaption>
+        <span class="shot-title">2. プレビュー</span>
+        生成結果をその場で確認し、楽天 PC 用／SP 用のコピーボタンから説明文を取得します。
+      </figcaption>
+    </figure>
+
+    <figure>
+      <img src="./images/03-html-output.png" alt="HTML出力画面。PC用とSP用のソースを並べて表示" width="1200" height="800" loading="lazy">
+      <figcaption>
+        <span class="shot-title">3. HTML 出力</span>
+        楽天 PC 用・SP 用のソースを並べて表示します。SP 側は見出しタグを寄せるなどの差分があります。
+      </figcaption>
+    </figure>
+
+    <h2>技術</h2>
+    <ul class="tech">
+      <li>フロントのみ（HTML / CSS / JavaScript）</li>
+      <li>店舗設定は設定ファイルから読み込み</li>
+      <li>ビルド: Sass、esbuild</li>
+      <li>変換ロジックはユニットテストで担保</li>
+    </ul>
+
+    <p class="note">
+      画面はデモ用の架空店舗・架空商品です。動くツール一式の配布はしていません（画面紹介のみ）。楽天公式・提携のサービスではありません。
+    </p>
+
+    <div class="actions">
+      <a href="../">← Portfolio に戻る</a>
+    </div>
+  </main>
+</body>
+</html>

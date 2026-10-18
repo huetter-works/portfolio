@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -15,7 +16,11 @@
       --accent: #b85c38;
       --card: #fffcf7;
     }
-    * { box-sizing: border-box; }
+
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
       min-height: 100vh;
@@ -25,16 +30,22 @@
         radial-gradient(ellipse at top left, #fff8ef 0%, transparent 55%),
         linear-gradient(160deg, var(--bg), #e8e2d8);
     }
+
     main {
       max-width: 44rem;
       margin: 0 auto;
       padding: 3rem 1.25rem 4rem;
     }
+
     .nav {
       margin-bottom: 1.5rem;
       font-size: 0.9rem;
     }
-    .nav a { color: var(--muted); }
+
+    .nav a {
+      color: var(--muted);
+    }
+
     h1 {
       margin: 0 0 1.25rem;
       font-size: clamp(1.45rem, 4vw, 1.95rem);
@@ -42,10 +53,12 @@
       letter-spacing: 0.03em;
       line-height: 1.35;
     }
+
     .lead {
       margin: 0 0 1.1rem;
       line-height: 1.85;
     }
+
     .note {
       margin: 1.5rem 0 0;
       padding: 0.9rem 1rem;
@@ -55,48 +68,62 @@
       font-size: 0.92rem;
       line-height: 1.7;
     }
+
     h2 {
       margin: 2.25rem 0 0.75rem;
       font-size: 1.05rem;
       font-weight: 600;
     }
-    ul.tech, ul.feats, ol.flow {
+
+    ul.tech,
+    ul.feats,
+    ol.flow {
       margin: 0;
       padding-left: 1.2rem;
       line-height: 1.8;
       color: var(--muted);
     }
+
     table {
       width: 100%;
       border-collapse: collapse;
       font-size: 0.92rem;
       margin: 0.5rem 0 0;
     }
-    th, td {
+
+    th,
+    td {
       border: 1px solid var(--line);
       padding: 0.55rem 0.7rem;
       text-align: left;
       vertical-align: top;
       line-height: 1.65;
     }
+
     th {
       background: var(--card);
       font-weight: 600;
       width: 28%;
       color: var(--ink);
     }
-    td { color: var(--muted); }
+
+    td {
+      color: var(--muted);
+    }
+
     figure {
       margin: 1rem 0 0;
       padding: 0.65rem;
       background: var(--card);
       border: 1px solid var(--line);
     }
+
     figure img {
       display: block;
       width: 100%;
       height: auto;
     }
+
     figcaption {
       margin-top: 0.65rem;
       padding: 0 0.15rem 0.15rem;
@@ -104,6 +131,7 @@
       font-size: 0.9rem;
       line-height: 1.65;
     }
+
     .shot-title {
       display: block;
       margin-bottom: 0.25rem;
@@ -111,17 +139,20 @@
       font-weight: 600;
       font-size: 0.95rem;
     }
+
     .actions {
       margin-top: 2.25rem;
       padding-top: 1.5rem;
       border-top: 1px solid var(--line);
     }
+
     .actions a {
       color: var(--muted);
       font-size: 0.9rem;
     }
   </style>
 </head>
+
 <body>
   <main>
     <p class="nav"><a href="../">← Portfolio</a></p>
@@ -139,7 +170,7 @@
       コミックは点数・品目が多く、毎日の入荷を正確に把握するのは大変です。現場では入荷箱を開けたら、とにかく片っ端から出荷できるよう全巻セットにしていく運用でした。<strong>出荷を急ぐからこそ、後から追える入荷データの精度が欲しかった</strong>——送品票から「どの商品がどれだけ届いたか」をデータ化し、Sheets 上で集計・入荷把握の土台にすることが動機です。
     </p>
     <p class="lead">
-      出版社へ直接注文したものも取次を経て届くため、対象帳票はおおむね取次の送品票に集約されます。
+      出版社へ直接注文したものも取次を経て届くため、対象帳票はおおむね取次の送品票に集約されます。プロトタイプとしては一通り組めましたが、当時の入荷・出荷業務のなかに導入・定着させる時間的余裕がなく、業務フローへの組み込みには至っていません。
     </p>
 
     <h2>画面</h2>
@@ -202,7 +233,7 @@
       </tr>
       <tr>
         <th>できなかった</th>
-        <td>手動訂正なしで回せる精度、学習による大幅な精度向上、認証など運用の詰め。無料寄りの OCR には限界があり、一人では時間が足りず実用化には至っていない</td>
+        <td>手動訂正なしで回せる精度や、学習による大幅な精度向上には課題が残る。それ以上に、当時の業務のなかで導入・定着まで進める時間的余裕がなく、業務フローへの組み込みには至っていない</td>
       </tr>
     </table>
 
@@ -237,4 +268,5 @@
     </div>
   </main>
 </body>
+
 </html>

@@ -118,9 +118,20 @@
     <p class="lead">
       あわせて、<strong>HTML の知識がないスタッフでも、同じ規格の商品ページを作れる</strong>ようにすることを目的にしました。
     </p>
+
+    <h2>対象と運用</h2>
+    <p class="lead">
+      当初は楽天の複数店舗に加え、Yahoo!ショッピングや Wowma なども対象にしていました。その後、各モールからの撤退に伴い、対象店舗は減っています。およそ3年前から運用しています。
+    </p>
     <p class="lead">
       制作後、自分自身の利用頻度はあまり高くありませんでしたが、知識のないスタッフでも商品ページを作成できるようになりました。
     </p>
+
+    <h2>Before / After</h2>
+    <ul class="feats">
+      <li><strong>以前:</strong> HTML 知識のないスタッフが作る商品ページは、テキスト情報だけの簡素なものになりがちだった</li>
+      <li><strong>以後:</strong> 店舗ごとの規格に沿った説明文になり、定型リンクなどの挿入も可能になった</li>
+    </ul>
 
     <h2>主な機能</h2>
     <ul class="feats">
@@ -164,12 +175,13 @@
       </figcaption>
     </figure>
 
-    <h2>技術</h2>
+    <h2>技術・仕様</h2>
     <ul class="tech">
-      <li>フロントのみ（HTML / CSS / JavaScript）</li>
-      <li>店舗設定は設定ファイルから読み込み</li>
-      <li>ビルド: Sass、esbuild</li>
-      <li>変換ロジックはユニットテストで担保</li>
+      <li>フロントのみ（HTML / CSS / JavaScript）。利用時に Node.js は不要</li>
+      <li>動作環境: Google Chrome（Safari / Firefox / Edge は非対応）</li>
+      <li>店舗設定は設定ファイルから読み込み（店舗追加は設定の差し替えで対応）</li>
+      <li>ビルド: Sass、esbuild／変換ロジックはユニットテストで担保</li>
+      <li>あらすじは `**太字**` や色・サイズ用の簡単な記法に対応。楽天 PC／SP 向けに出力を分ける</li>
     </ul>
 
     <p class="note">

@@ -6,6 +6,7 @@
 
 - トップ: https://huetter-works.github.io/portfolio/
 - 楽天商品説明文変換ツール: https://huetter-works.github.io/portfolio/RakutenDescriptionTool/
+- 送品票 OCR → Google Sheets: https://huetter-works.github.io/portfolio/PdfDeliveryNoteToSheets/
 - Amazon Ranking Predictor: https://huetter-works.github.io/portfolio/AmazonRankingPredictor/
 - Mondrian: https://huetter-works.github.io/portfolio/Mondrian/
 - Cafe Sample: https://huetter-works.github.io/portfolio/CafeSample/
@@ -16,6 +17,7 @@
 | フォルダ | 内容 |
 |----------|------|
 | [RakutenDescriptionTool](./RakutenDescriptionTool/) | 楽天向け商品説明 HTML 生成ツール（画面紹介のみ） |
+| [PdfDeliveryNoteToSheets](./PdfDeliveryNoteToSheets/) | 送品票 OCR → Sheets（個人開発プロトタイプ。未実用・画面紹介） |
 | [AmazonRankingPredictor](./AmazonRankingPredictor/) | BSR 予測ビューア（小規模・過去サンプル。限界も含めて紹介） |
 | [Mondrian](./Mondrian/) | CSS Grid でモンドリアンの画面構成を模したギャラリー |
 | [CafeSample](./CafeSample/) | 架空カフェの1ページレイアウト習作 |

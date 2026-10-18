@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="description" content="送品票 OCR → Google Sheets — 業務改善プロトタイプの紹介">
+  <title>送品票 OCR → Google Sheets — huetter-works / Portfolio</title>
+  <style>
+    :root {
+      --bg: #f4f1ec;
+      --ink: #1c1b19;
+      --muted: #5c574f;
+      --line: #d9d2c7;
+      --accent: #b85c38;
+      --card: #fffcf7;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: "Hiragino Mincho ProN", "Yu Mincho", "Noto Serif JP", serif;
+      color: var(--ink);
+      background:
+        radial-gradient(ellipse at top left, #fff8ef 0%, transparent 55%),
+        linear-gradient(160deg, var(--bg), #e8e2d8);
+    }
+    main {
+      max-width: 44rem;
+      margin: 0 auto;
+      padding: 3rem 1.25rem 4rem;
+    }
+    .nav {
+      margin-bottom: 1.5rem;
+      font-size: 0.9rem;
+    }
+    .nav a { color: var(--muted); }
+    h1 {
+      margin: 0 0 1.25rem;
+      font-size: clamp(1.45rem, 4vw, 1.95rem);
+      font-weight: 600;
+      letter-spacing: 0.03em;
+      line-height: 1.35;
+    }
+    .lead {
+      margin: 0 0 1.1rem;
+      line-height: 1.85;
+    }
+    .note {
+      margin: 1.5rem 0 0;
+      padding: 0.9rem 1rem;
+      background: var(--card);
+      border: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 0.92rem;
+      line-height: 1.7;
+    }
+    h2 {
+      margin: 2.25rem 0 0.75rem;
+      font-size: 1.05rem;
+      font-weight: 600;
+    }
+    ul.tech, ul.feats, ol.flow {
+      margin: 0;
+      padding-left: 1.2rem;
+      line-height: 1.8;
+      color: var(--muted);
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.92rem;
+      margin: 0.5rem 0 0;
+    }
+    th, td {
+      border: 1px solid var(--line);
+      padding: 0.55rem 0.7rem;
+      text-align: left;
+      vertical-align: top;
+      line-height: 1.65;
+    }
+    th {
+      background: var(--card);
+      font-weight: 600;
+      width: 28%;
+      color: var(--ink);
+    }
+    td { color: var(--muted); }
+    figure {
+      margin: 1rem 0 0;
+      padding: 0.65rem;
+      background: var(--card);
+      border: 1px solid var(--line);
+    }
+    figure img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+    figcaption {
+      margin-top: 0.65rem;
+      padding: 0 0.15rem 0.15rem;
+      color: var(--muted);
+      font-size: 0.9rem;
+      line-height: 1.65;
+    }
+    .shot-title {
+      display: block;
+      margin-bottom: 0.25rem;
+      color: var(--ink);
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+    .actions {
+      margin-top: 2.25rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--line);
+    }
+    .actions a {
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <p class="nav"><a href="../">← Portfolio</a></p>
+    <h1>送品票 OCR → Google Sheets</h1>
+
+    <p class="lead">
+      スキャンした送品票（納品書）PDF から表構造を読み取り、Google スプレッドシートへ載せる処理を半自動化する Windows 向けツールです。業務時間外の完全個人開発による業務改善プロトタイプで、会社からの依頼や業務時間内の開発ではありません。
+    </p>
+    <p class="lead">
+      全項目の手入力よりは楽になりますが、読み取り結果を帳票と見比べて手動訂正する前提です。無料寄りの OCR では精度に限界があり、一人開発のため退職までに実用と呼べる状態には間に合いませんでした。公開の目的は完成製品の宣伝ではなく、課題分解・パイプライン設計・デバッグの進め方を示すことです。
+    </p>
+
+    <h2>背景・課題</h2>
+    <p class="lead">紙スキャンの送品票を手入力するとコストが高い一方で、次が難しいです。</p>
+    <ul class="feats">
+      <li>歪み・傾き・薄い罫線</li>
+      <li>明細の列境界ズレ（冊数／本体／正味）</li>
+      <li>ページ抜け・行抜けの見逃し</li>
+      <li>OCR 誤読とヘッダ集計の不一致</li>
+    </ul>
+    <p class="lead">方針は、先に幾何（読み取り枠＝ROI）を正し、そのうえで OCR・検証・人手訂正（HITL）に回すことでした。</p>
+
+    <h2>できたこと / できなかったこと</h2>
+    <table>
+      <tr>
+        <th>できた</th>
+        <td>前処理・罫線・ROI デバッグ、ハイブリッド OCR、Sheets 書込経路、検証、HITL（見比べ訂正）メニュー、exe 配布</td>
+      </tr>
+      <tr>
+        <th>できた（部分）</th>
+        <td>列ずれの治癒、明細開始位置の安全弁、ページ生存のログ監視。手入力より負担は減る一方、帳票照合の手動訂正は残る</td>
+      </tr>
+      <tr>
+        <th>できなかった</th>
+        <td>手動訂正なしで回せる精度、学習による大幅な精度向上、認証など運用の詰め、一人体制での実用化（時間切れ）</td>
+      </tr>
+    </table>
+
+    <h2>処理の流れ</h2>
+    <ol class="flow">
+      <li>PDF / 画像</li>
+      <li>前処理・罫線検出</li>
+      <li>ROI（列・行の読み取り枠）</li>
+      <li>ハイブリッド OCR</li>
+      <li>検証 → Sheets / Drive、必要に応じて HITL 訂正</li>
+    </ol>
+
+    <h2>画面</h2>
+    <p class="lead" style="color: var(--muted); font-size: 0.95rem;">
+      帳票ヘッダー（店名・取次・各種コードなど）はぼかし済みです。明細・フッターでは正味／掛率が分かる数値のみぼかし、コミック名・冊数・本体単価・商品コードの ROI 例は技術説明のため残しています。
+    </p>
+
+    <figure>
+      <img src="./images/06_hitl_menu.png" alt="運用メニュー画面。訂正取り込みや OCR 実行などのボタン一覧" width="900" height="700" loading="lazy">
+      <figcaption>
+        <span class="shot-title">1. 運用メニュー</span>
+        訂正取り込み・再学習・PDF 処理の入口です。
+      </figcaption>
+    </figure>
+
+    <figure>
+      <img src="./images/01_roi_dense_page.png" alt="明細が多い頁の ROI オーバーレイ。列ごとに色枠" width="1200" height="900" loading="lazy">
+      <figcaption>
+        <span class="shot-title">2. ROI オーバーレイ（明細が多い頁）</span>
+        冊数／本体／正味／商品コードの色枠。列境界を目視するデバッグ出力です（正味の数値はマスク）。
+      </figcaption>
+    </figure>
+
+    <figure>
+      <img src="./images/02_roi_sparse_page.png" alt="明細が少ない頁とフッターの ROI オーバーレイ" width="1200" height="900" loading="lazy">
+      <figcaption>
+        <span class="shot-title">3. ROI オーバーレイ（明細が少ない頁＋フッター）</span>
+        フッターは点数・冊数など非感度の枠を残し、正味／掛率が分かる金額はマスクしています。
+      </figcaption>
+    </figure>
+
+    <h2>工夫した点</h2>
+    <ul class="feats">
+      <li>デバッグ画像と抽出座標を同じ基準にし、「見た枠」と「読んだ枠」の食い違いを減らす</li>
+      <li>偽の縦罫による列ずれを、検出線から選び直して直す試み</li>
+      <li>明細開始位置が見出し帯へ食い込まないよう下限を設ける</li>
+      <li>ヘッダ集計と明細合計の不一致を検知し、精度不足を可視化する</li>
+      <li>書き込みなしの試行（dry_run）、HITL、exe 配布まで一通り用意</li>
+    </ul>
+
+    <h2>検証で見えたこと</h2>
+    <p class="lead">
+      開発末期のランでは、処理は最後まで完走し、ページ抜けも見えない例がありました。列ずれが改善した頁もあります。一方で OCR の残り誤差や検証不一致は残り、帳票との見比べ訂正が必要でした。学習による効果も限定的です。
+    </p>
+
+    <h2>技術</h2>
+    <ul class="tech">
+      <li>Python · OpenCV · PyMuPDF</li>
+      <li>Tesseract / EasyOCR · PyTorch（CUDA）</li>
+      <li>Google Sheets API · Drive API</li>
+      <li>PyInstaller · pytest</li>
+    </ul>
+
+    <p class="note">
+      動く一式の配布はしていません（紹介と画面のみ）。実運用の認証情報や未マスクの帳票は公開しません。
+    </p>
+
+    <div class="actions">
+      <a href="../">← Portfolio に戻る</a>
+    </div>
+  </main>
+</body>
+</html>
